@@ -1,0 +1,37 @@
+@import "../../styles/vars.css";
+
+.toggle {
+  position: relative;
+  z-index: 110;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--surface-glass);
+  border: 1px solid var(--surface-glass-border);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s var(--ease-standard), border-color 0.3s ease;
+}
+
+.toggle:hover {
+  background: var(--surface-glass-strong);
+  transform: translateY(-2px);
+}
+
+.icon {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  transform: scale(0.5) rotate(-90deg);
+  transition: opacity 0.35s var(--ease-standard), transform 0.35s var(--ease-standard);
+}
+
+.iconVisible {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}

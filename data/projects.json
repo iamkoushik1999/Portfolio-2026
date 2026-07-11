@@ -1,0 +1,42 @@
+[
+  {
+    "title": "MERN Blog",
+    "imageSrc": "projects/project.png",
+    "description": "Blogging website with Admin and User functionality",
+    "skills": ["React", "Node", "Express", "Mongodb", "Google OAuth"],
+    "demo": "https://iamkoushik1999-mern-blog.onrender.com",
+    "source": "https://github.com/iamkoushik1999/MERN-Blog"
+  },
+  {
+    "title": "Voting App",
+    "imageSrc": "projects/project.png",
+    "description": "This is a project that I tried for the 1st time while I was learning MERN Stack",
+    "skills": ["React", "Node", "Express", "Mongodb"],
+    "demo": "https://github.com/iamkoushik1999/Voting-App",
+    "source": "https://github.com/iamkoushik1999/Voting-App"
+  },
+  {
+    "title": "Book Store",
+    "imageSrc": "projects/project.png",
+    "description": "This is a book store app where anyone can create update and delete books",
+    "skills": ["React", "Node", "Express", "Mongodb"],
+    "demo": "https://github.com/iamkoushik1999/Book-Store-Frontend",
+    "source": "https://github.com/iamkoushik1999/Book-Store-Server"
+  },
+  {
+    "title": "CRUD Project",
+    "imageSrc": "projects/project.png",
+    "description": "This is a project made to learn the latest languages by building an app.",
+    "skills": ["React", "Node", "Express", "Mongodb"],
+    "demo": "https://github.com/iamkoushik1999/FullStack-CRUD-Frontend",
+    "source": "https://github.com/iamkoushik1999/FullStack-CRUD-Backend"
+  },
+  {
+    "title": "To Do App",
+    "imageSrc": "projects/project.png",
+    "description": "This is a project made to learn the latest languages by building an app.",
+    "skills": ["React", "Node", "Express", "Mongodb"],
+    "demo": "https://iamkoushik1999-todo-frontend.netlify.app",
+    "source": "https://github.com/iamkoushik1999/ToDoApp-Server"
+  }
+]

@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Email",
+    "imageSrc": "contact/email.svg",
+    "link": "mailto:iamkoushik1999@gmail.com"
+  },
+  {
+    "title": "Linked In",
+    "imageSrc": "contact/linkedin.svg",
+    "link": "https://www.linkedin.com/in/koushikdutta/"
+  },
+  {
+    "title": "Github",
+    "imageSrc": "contact/github.svg",
+    "link": "https://github.com/iamkoushik1999"
+  },
+  {
+    "title": "All Links",
+    "imageSrc": "contact/links.svg",
+    "link": "https://linktr.ee/iamkoushik1999"
+  }
+]

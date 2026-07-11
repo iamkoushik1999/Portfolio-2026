@@ -1,0 +1,12 @@
+@import "../styles/vars.css";
+
+.App {
+  position: relative;
+  background-color: var(--color-bg);
+  background-image:
+    radial-gradient(circle at 15% 10%, var(--bg-glow-1) 0%, transparent 45%),
+    radial-gradient(circle at 85% 30%, var(--bg-glow-2) 0%, transparent 45%);
+  width: 100%;
+  min-height: 100vh;
+  transition: background-color 0.3s ease;
+}

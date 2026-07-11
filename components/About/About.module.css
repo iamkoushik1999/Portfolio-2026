@@ -1,0 +1,124 @@
+@import "../../styles/vars.css";
+
+.container {
+  position: relative;
+  margin-top: var(--space-section);
+  z-index: 1;
+  margin-left: var(--space-gutter);
+  margin-right: var(--space-gutter);
+}
+
+.eyebrow {
+  color: var(--color-accent);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.title {
+  color: var(--color-text);
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 40px;
+  max-width: 20ch;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 48px;
+  background: var(--surface-card);
+  border: 1px solid var(--surface-glass-border);
+  border-radius: var(--radius-lg);
+  padding: clamp(24px, 4vw, 56px);
+  box-shadow: var(--shadow-elevated);
+}
+
+.imageWrap {
+  flex-shrink: 0;
+  width: 32%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--gradient-accent-soft);
+}
+
+.aboutImage {
+  width: 100%;
+  display: block;
+}
+
+.aboutItems {
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  flex: 1;
+}
+
+.aboutItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 24px;
+  border-radius: var(--radius-md);
+  list-style: none;
+  padding: 22px;
+  background: var(--surface-glass);
+  border: 1px solid transparent;
+  transition: border-color 0.3s ease, background-color 0.3s ease, transform 0.3s var(--ease-standard);
+}
+
+.aboutItem:hover {
+  border-color: var(--surface-glass-border);
+  background: var(--surface-glass-strong);
+  transform: translateY(-2px);
+}
+
+.aboutItem img {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+}
+
+.aboutItem h3 {
+  font-size: var(--fs-md);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.aboutItem p {
+  font-size: var(--fs-base);
+  color: var(--color-text-muted);
+  line-height: 1.55;
+}
+
+@media screen and (max-width: 830px) {
+  .content {
+    flex-direction: column;
+    padding: 28px;
+  }
+
+  .imageWrap {
+    width: 60%;
+  }
+
+  .aboutItem {
+    padding: 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .imageWrap {
+    width: 80%;
+  }
+
+  .aboutItem {
+    flex-direction: column;
+    text-align: center;
+    gap: 14px;
+  }
+}

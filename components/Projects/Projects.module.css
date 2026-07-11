@@ -1,0 +1,31 @@
+@import "../../styles/vars.css";
+
+.container {
+  margin-top: var(--space-section);
+  color: var(--color-text);
+  margin-left: var(--space-gutter);
+  margin-right: var(--space-gutter);
+}
+
+.eyebrow {
+  color: var(--color-accent);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.projects {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  width: 100%;
+}

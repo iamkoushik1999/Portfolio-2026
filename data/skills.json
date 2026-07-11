@@ -1,0 +1,30 @@
+[
+  {
+    "title": "JavaScript",
+    "imageSrc": "skills/javascript.svg"
+  },
+  {
+    "title": "React",
+    "imageSrc": "skills/react.svg"
+  },
+  {
+    "title": "Node",
+    "imageSrc": "skills/node.svg"
+  },
+  {
+    "title": "MongoDB",
+    "imageSrc": "skills/mongodb.svg"
+  },
+  {
+    "title": "Express",
+    "imageSrc": "skills/express.svg"
+  },
+  {
+    "title": "Git",
+    "imageSrc": "skills/git.svg"
+  },
+  {
+    "title": "AWS",
+    "imageSrc": "skills/aws.svg"
+  }
+]

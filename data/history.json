@@ -1,0 +1,15 @@
+[
+  {
+    "role": "Node Js Developer",
+    "organisation": "Hih7 Webtech Pvt Ltd",
+    "startDate": "January, 2023",
+    "endDate": "Present",
+    "experiences": [
+      "3rd Party API data save to own database",
+      "Starting a project from scratch with database design",
+      "AWS EC2 Deploy using GIT",
+      "Contributed in Frontend React Parts"
+    ],
+    "imageSrc": "history/company.png"
+  }
+]

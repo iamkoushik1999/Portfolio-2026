@@ -1,0 +1,47 @@
+@import "../../styles/vars.css";
+
+.button {
+  position: fixed;
+  right: clamp(16px, 4vw, 40px);
+  bottom: clamp(16px, 4vw, 40px);
+  z-index: 90;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--surface-glass-border);
+  background: var(--gradient-accent);
+  color: var(--color-on-accent);
+  box-shadow: var(--shadow-elevated);
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(16px) scale(0.9);
+  pointer-events: none;
+  transition: opacity 0.3s var(--ease-standard), transform 0.3s var(--ease-standard),
+    box-shadow 0.3s ease;
+}
+
+.button.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.button:hover {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: var(--shadow-glow);
+}
+
+.button svg {
+  width: 22px;
+  height: 22px;
+}
+
+@media screen and (max-width: 480px) {
+  .button {
+    width: 44px;
+    height: 44px;
+  }
+}

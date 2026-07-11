@@ -1,0 +1,122 @@
+@import "../../styles/vars.css";
+
+.container {
+  position: relative;
+  color: var(--color-text);
+  margin-top: var(--space-section);
+  background: var(--footer-gradient);
+  width: 100%;
+  padding: clamp(48px, 8vw, 90px) var(--space-gutter) 32px;
+  transition: background 0.3s ease;
+}
+
+.inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  color: var(--color-accent);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.text h2 {
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  max-width: 14ch;
+}
+
+.subtitle {
+  margin-top: 14px;
+  font-size: var(--fs-base);
+  font-weight: 400;
+  color: var(--color-text-muted);
+  max-width: 40ch;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.linkCard {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: var(--fs-base);
+  font-weight: 500;
+  letter-spacing: 0.25px;
+  background: var(--surface-glass);
+  border: 1px solid var(--surface-glass-border);
+  border-radius: 100px;
+  padding: 12px 24px 12px 12px;
+  transition: transform 0.3s var(--ease-standard), background-color 0.3s ease;
+}
+
+.linkCard:hover {
+  transform: translateX(6px);
+  background: var(--surface-glass-strong);
+}
+
+.linkIcon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--surface-glass);
+  border: 1px solid var(--surface-glass-border);
+  padding: 6px;
+}
+
+.copyright {
+  margin-top: 56px;
+  text-align: center;
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+}
+
+@media screen and (max-width: 830px) {
+  .inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .text h2 {
+    max-width: 100%;
+  }
+
+  .subtitle {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .links {
+    align-items: center;
+    width: 100%;
+  }
+
+  .linkCard {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+
+  .copyright {
+    margin-top: 40px;
+  }
+}
