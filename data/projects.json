@@ -3,7 +3,7 @@
     "title": "MERN Blog",
     "imageSrc": "projects/project.png",
     "description": "Blogging website with Admin and User functionality",
-    "skills": ["React", "Node", "Express", "Mongodb", "Google OAuth"],
+    "skills": ["React", "Node", "Express", "Mongodb", "Google OAuth", "Render"],
     "demo": "https://iamkoushik1999-mern-blog.onrender.com",
     "source": "https://github.com/iamkoushik1999/MERN-Blog"
   },
@@ -16,20 +16,20 @@
     "source": "https://github.com/iamkoushik1999/Voting-App"
   },
   {
-    "title": "Book Store",
-    "imageSrc": "projects/project.png",
-    "description": "This is a book store app where anyone can create update and delete books",
-    "skills": ["React", "Node", "Express", "Mongodb"],
-    "demo": "https://github.com/iamkoushik1999/Book-Store-Frontend",
-    "source": "https://github.com/iamkoushik1999/Book-Store-Server"
+    "title": "QR Menu",
+    "imageSrc": "projects/qr-menu.png",
+    "description": "This is a QR menu app for restaurants",
+    "skills": ["React", "Node", "Express", "Mongodb", "Render", "Netlify"],
+    "demo": "https://instant-qr-menu.netlify.app/",
+    "source": "https://github.com/iamkoushik1999/QR-Menu-Backend"
   },
   {
     "title": "CRUD Project",
-    "imageSrc": "projects/project.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Node", "Express", "Mongodb"],
-    "demo": "https://github.com/iamkoushik1999/FullStack-CRUD-Frontend",
-    "source": "https://github.com/iamkoushik1999/FullStack-CRUD-Backend"
+    "imageSrc": "projects/authenticator-app.png",
+    "description": "Authentication and Authorization project with Authenticator App",
+    "skills": ["React", "Node", "Express", "Mongodb", "Render", "Netlify"],
+    "demo": "https://authenticator-app-frontend.netlify.app",
+    "source": "https://github.com/iamkoushik1999/Authenticator-App-Backend"
   },
   {
     "title": "To Do App",
