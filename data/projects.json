@@ -24,19 +24,19 @@
     "source": "https://github.com/iamkoushik1999/Authenticator-App-Backend"
   },
   {
+    "title": "Result Analysis System",
+    "imageSrc": "projects/result-sys.png",
+    "description": "A result analysis system for teachers to analyze the results of students",
+    "skills": ["React", "Node", "Express", "Mongodb", "Render", "PDFKit"],
+    "demo": "https://school-result-system.onrender.com",
+    "source": "https://github.com/iamkoushik1999/School-Result-System"
+  },
+  {
     "title": "MERN Blog",
     "imageSrc": "projects/project.png",
     "description": "Blogging website with Admin and User functionality",
     "skills": ["React", "Node", "Express", "Mongodb", "Google OAuth", "Render"],
     "demo": "https://iamkoushik1999-mern-blog.onrender.com",
     "source": "https://github.com/iamkoushik1999/MERN-Blog"
-  },
-  {
-    "title": "To Do App",
-    "imageSrc": "projects/project.png",
-    "description": "This is a project made to learn the latest languages by building an app.",
-    "skills": ["React", "Node", "Express", "Mongodb"],
-    "demo": "https://iamkoushik1999-todo-frontend.netlify.app",
-    "source": "https://github.com/iamkoushik1999/ToDoApp-Server"
   }
 ]
