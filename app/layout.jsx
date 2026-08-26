@@ -69,7 +69,7 @@ const THEME_INIT_SCRIPT = `
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth">
       <body>
         <Script id="theme-init" strategy="beforeInteractive">
           {THEME_INIT_SCRIPT}

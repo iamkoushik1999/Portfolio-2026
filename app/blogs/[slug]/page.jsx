@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
 import styles from './page.module.css';
@@ -105,11 +106,16 @@ export default async function BlogPostPage({ params }) {
         </div>
 
         <div className={styles.cover} data-aos='fade-up'>
-          <img
-            className={styles.coverImage}
-            src={getImageUrl(coverImage)}
-            alt={title}
-          />
+          <div className={styles.coverImageWrap}>
+            <Image
+              className={styles.coverImage}
+              src={getImageUrl(coverImage)}
+              alt={title}
+              fill
+              sizes='(max-width: 960px) 100vw, 960px'
+              priority
+            />
+          </div>
         </div>
 
         <article className={styles.article} data-aos='fade-up'>

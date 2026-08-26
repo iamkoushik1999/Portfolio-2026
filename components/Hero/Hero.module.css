@@ -113,6 +113,7 @@
 .imageWrap {
   position: relative;
   width: 46%;
+  aspect-ratio: 546 / 551;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -127,9 +128,8 @@
 }
 
 .heroImg {
-  position: relative;
-  width: 100%;
   z-index: 1;
+  object-fit: contain;
   animation-name: floating;
   animation-duration: 4s;
   animation-iteration-count: infinite;

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import styles from "./About.module.css";
 import { getImageUrl } from "../../lib/utils";
 
@@ -9,15 +11,22 @@ export const About = () => {
         <h2 className={styles.title}>What I bring to the table</h2>
         <div className={styles.content}>
           <div className={styles.imageWrap}>
-            <img
+            <Image
               className={styles.aboutImage}
               src={getImageUrl("about/aboutImage.png")}
               alt="Illustration of Koushik using a laptop"
+              fill
+              sizes="(max-width: 480px) 80vw, (max-width: 830px) 60vw, 32vw"
             />
           </div>
           <ul className={styles.aboutItems}>
             <li className={styles.aboutItem}>
-              <img src={getImageUrl("about/serverIcon.png")} alt="" />
+              <Image
+                src={getImageUrl("about/serverIcon.png")}
+                alt=""
+                width={56}
+                height={56}
+              />
               <div>
                 <h3>Backend Developer</h3>
                 <p>
@@ -28,7 +37,12 @@ export const About = () => {
               </div>
             </li>
             <li className={styles.aboutItem}>
-              <img src={getImageUrl("about/cursorIcon.png")} alt="" />
+              <Image
+                src={getImageUrl("about/cursorIcon.png")}
+                alt=""
+                width={56}
+                height={56}
+              />
               <div>
                 <h3>React Contributor</h3>
                 <p>

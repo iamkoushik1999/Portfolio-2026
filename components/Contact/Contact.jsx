@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import styles from "./Contact.module.css";
 // Data
 import contacts from "../../data/contacts.json";
@@ -27,10 +29,12 @@ export const Contact = () => {
                   rel="noreferrer"
                   className={styles.linkCard}
                 >
-                  <img
+                  <Image
                     src={getImageUrl(contact.imageSrc)}
                     alt=""
                     className={styles.linkIcon}
+                    width={48}
+                    height={48}
                   />
                   <span>{contact.title}</span>
                 </a>

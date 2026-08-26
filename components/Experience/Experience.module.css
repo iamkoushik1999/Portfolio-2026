@@ -97,6 +97,7 @@
 
 .historyItem img {
   width: 48px;
+  height: auto;
   flex-shrink: 0;
   margin-top: 4px;
 }

@@ -116,7 +116,9 @@
         "type": "image",
         "src": "blog/render-github-deploy/deploy-flow.svg",
         "alt": "Flow diagram showing four steps: push to GitHub, Render build, start command, then a live URL",
-        "caption": "Push to your branch and Render takes it from there — build, start, live."
+        "caption": "Push to your branch and Render takes it from there — build, start, live.",
+        "width": 1000,
+        "height": 320
       },
       {
         "type": "list",
@@ -195,7 +197,9 @@
         "type": "image",
         "src": "blog/render-github-deploy/tradeoffs.svg",
         "alt": "Diagram of the free-tier spin-down cycle: active, then asleep after idle time, then a cold start, then active again",
-        "caption": "The free-tier reality: idle for ~15 minutes, then a 30–60 second cold start on the next request."
+        "caption": "The free-tier reality: idle for ~15 minutes, then a 30–60 second cold start on the next request.",
+        "width": 1000,
+        "height": 320
       },
       {
         "type": "paragraph",

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 import styles from './BlogCard.module.css';
 import { getImageUrl } from '../../lib/utils';
@@ -14,11 +15,12 @@ export const BlogCard = ({ blog, index = 0 }) => {
       data-aos='fade-up'
       data-aos-delay={(index % 3) * 100}>
       <div className={styles.imageWrap}>
-        <img
+        <Image
           className={styles.image}
           src={getImageUrl(coverImage)}
           alt=''
-          loading='lazy'
+          fill
+          sizes='(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 380px'
         />
       </div>
       <div className={styles.body}>

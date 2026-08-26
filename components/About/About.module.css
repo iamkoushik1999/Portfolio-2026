@@ -39,16 +39,17 @@
 }
 
 .imageWrap {
+  position: relative;
   flex-shrink: 0;
   width: 32%;
+  aspect-ratio: 562 / 493;
   border-radius: var(--radius-md);
   overflow: hidden;
   background: var(--gradient-accent-soft);
 }
 
 .aboutImage {
-  width: 100%;
-  display: block;
+  object-fit: cover;
 }
 
 .aboutItems {

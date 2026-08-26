@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import styles from "./Hero.module.css";
 import { getImageUrl } from "../../lib/utils";
 
@@ -40,10 +42,13 @@ export const Hero = () => {
         data-aos-delay="150"
       >
         <div className={styles.imageGlow} />
-        <img
+        <Image
           src={getImageUrl("hero/heroImage.png")}
           alt="Illustration of Koushik working on a laptop"
           className={styles.heroImg}
+          fill
+          sizes="(max-width: 480px) 82vw, (max-width: 830px) 68vw, 46vw"
+          priority
         />
       </div>
 

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import styles from "./Experience.module.css";
 // Data
 import skills from "../../data/skills.json";
@@ -21,10 +23,12 @@ export const Experience = () => {
                   data-aos-delay={(id % 4) * 80}
                 >
                   <div>
-                    <img
+                    <Image
                       className={styles.skillImageContainer}
                       src={getImageUrl(skill.imageSrc)}
                       alt={skill.title}
+                      width={48}
+                      height={48}
                     />
                   </div>
                   <p>{skill.title}</p>
@@ -41,9 +45,11 @@ export const Experience = () => {
                   data-aos="fade-up"
                   data-aos-delay={id * 100}
                 >
-                  <img
+                  <Image
                     src={getImageUrl(historyItem.imageSrc)}
                     alt={`${historyItem.organisation} Logo`}
+                    width={50}
+                    height={37}
                   />
                   <div className={styles.historyItemDetails}>
                     <h3>{`${historyItem.role}, ${historyItem.organisation}`}</h3>

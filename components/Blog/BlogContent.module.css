@@ -101,6 +101,7 @@
 
 .image {
   width: 100%;
+  height: auto;
   border-radius: var(--radius-md);
   border: 1px solid var(--surface-glass-border);
   box-shadow: var(--shadow-elevated);

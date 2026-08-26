@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import styles from './BlogContent.module.css';
 import { getImageUrl } from '../../lib/utils';
 import { renderInlineText } from '../../lib/inline-text';
@@ -65,11 +67,13 @@ export const BlogContent = ({ content }) => {
         if (block.type === 'image') {
           return (
             <figure key={index} className={styles.figure}>
-              <img
+              <Image
                 className={styles.image}
                 src={getImageUrl(block.src)}
                 alt={block.alt}
-                loading='lazy'
+                width={block.width}
+                height={block.height}
+                sizes='(max-width: 760px) 100vw, 720px'
               />
               {block.caption && (
                 <figcaption className={styles.caption}>
