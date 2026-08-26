@@ -1,17 +1,36 @@
-"use client";
+'use client';
 
-import { useEffect, useState } from "react";
-import Link from "next/link";
+import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
-import styles from "./Navbar.module.css";
-import { ThemeToggle } from "../ThemeToggle/ThemeToggle";
+import styles from './Navbar.module.css';
+import { ThemeToggle } from '../ThemeToggle/ThemeToggle';
 
 const NAV_LINKS = [
-  { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
-  { label: "Certifications", href: "#certifications" },
-  { label: "Projects", href: "#projects" },
-  { label: "Contact", href: "#contact" },
+  {
+    label: 'About',
+    href: '/#about',
+  },
+  {
+    label: 'Experience',
+    href: '/#experience',
+  },
+  {
+    label: 'Certifications',
+    href: '/#certifications',
+  },
+  {
+    label: 'Projects',
+    href: '/#projects',
+  },
+  {
+    label: 'Blogs',
+    href: '/blogs',
+  },
+  {
+    label: 'Contact',
+    href: '/#contact',
+  },
 ];
 
 export const Navbar = () => {
@@ -21,14 +40,14 @@ export const Navbar = () => {
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
     onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   useEffect(() => {
-    document.body.style.overflow = menuOpen ? "hidden" : "";
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
     return () => {
-      document.body.style.overflow = "";
+      document.body.style.overflow = '';
     };
   }, [menuOpen]);
 
@@ -41,12 +60,12 @@ export const Navbar = () => {
       !event.altKey;
     if (!isPlainLeftClick) return;
     event.preventDefault();
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
-    <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
-      <Link className={styles.title} href="/" onClick={handleLogoClick}>
+    <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
+      <Link className={styles.title} href='/' onClick={handleLogoClick}>
         Koushik<span className={styles.titleDot}>.</span>dev
       </Link>
 
@@ -54,31 +73,29 @@ export const Navbar = () => {
         <ThemeToggle />
 
         <button
-          type="button"
-          className={`${styles.menuBtn} ${menuOpen ? styles.menuBtnOpen : ""}`}
-          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          type='button'
+          className={`${styles.menuBtn} ${menuOpen ? styles.menuBtnOpen : ''}`}
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={menuOpen}
-          onClick={() => setMenuOpen((open) => !open)}
-        >
+          onClick={() => setMenuOpen((open) => !open)}>
           <span />
           <span />
           <span />
         </button>
 
         <ul
-          className={`${styles.menuItems} ${menuOpen ? styles.menuOpen : ""}`}
-        >
+          className={`${styles.menuItems} ${menuOpen ? styles.menuOpen : ''}`}>
           {NAV_LINKS.map(({ label, href }) => (
             <li key={href}>
-              <a href={href} onClick={() => setMenuOpen(false)}>
+              <Link href={href} onClick={() => setMenuOpen(false)}>
                 {label}
-              </a>
+              </Link>
             </li>
           ))}
           <li className={styles.menuCta}>
-            <a href="#contact" onClick={() => setMenuOpen(false)}>
+            <Link href='/#contact' onClick={() => setMenuOpen(false)}>
               Let&apos;s talk
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

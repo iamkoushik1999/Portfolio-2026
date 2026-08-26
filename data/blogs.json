@@ -1,0 +1,228 @@
+[
+  {
+    "slug": "render-github-deploy",
+    "title": "Signing Up on Render with GitHub and Deploying a Node.js App",
+    "excerpt": "Why connecting GitHub during Render's sign-up flow saves you a step, how to actually deploy a Node.js API as a web service, and the free-tier trade-offs that catch people off guard later.",
+    "date": "2026-08-26",
+    "readTime": "9 min read",
+    "tags": ["Render", "Node.js", "Deployment", "GitHub"],
+    "coverImage": "blog/render-github-deploy/cover.svg",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "When I needed a place to host a small Node.js API for testing, I didn't want to deal with setting up servers, configuring Nginx, or managing SSH keys just to see if the project worked. That's basically why Render exists, and why so many people recommend it for small to mid-sized projects."
+      },
+      { "type": "paragraph", "text": "In this post I want to go through:" },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "What Render actually is",
+          "Why signing up with GitHub makes sense",
+          "How to deploy a Node.js project as a web service",
+          "The real pros and cons, so you don't get surprised later"
+        ]
+      },
+
+      { "type": "heading", "text": "What is Render?" },
+      {
+        "type": "paragraph",
+        "text": "Render is a cloud hosting platform. You give it a Git repository, and it builds and runs your app for you. You don't touch a Linux server directly. No manually installing Node, no configuring a reverse proxy, no setting up a process manager like PM2."
+      },
+      {
+        "type": "paragraph",
+        "text": "Render supports a few different things:"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "Web services (this is what we'll use for a Node.js API)",
+          "Static sites (for frontend builds like a React app)",
+          "Background workers",
+          "Cron jobs",
+          "Managed PostgreSQL and Redis (called Key Value on Render)"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "For a Node.js backend, \"web service\" is the one you want."
+      },
+
+      { "type": "heading", "text": "Why Sign Up with GitHub Instead of Email" },
+      {
+        "type": "paragraph",
+        "text": "Render lets you sign up with GitHub, GitLab, Bitbucket, Google, or a plain email and password. Technically, all of them work. But if your project already lives on GitHub, connecting through GitHub saves you an extra step later."
+      },
+      {
+        "type": "paragraph",
+        "text": "Here's the thing I didn't realize at first: connecting GitHub for **login** and connecting GitHub for **deployment** are two separate things on Render. You can log in with email and still connect GitHub later just to pull your repos, or you can do both through GitHub in one go."
+      },
+      {
+        "type": "paragraph",
+        "text": "If you sign up with GitHub directly, Render authorizes access to your GitHub account as part of the sign-up flow. That means:"
+      },
+      {
+        "type": "list",
+        "ordered": false,
+        "items": [
+          "You skip creating a separate password for Render.",
+          "Your GitHub repos show up right away when you go to create a service.",
+          "Every time you push new code to your connected branch, Render can automatically rebuild and redeploy it, without you doing anything manually."
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "If you sign up with plain email instead, you'll still need to connect GitHub afterward from your account settings before you can deploy anything from a repo. So functionally, signing up with GitHub is just doing that step upfront instead of doing it twice."
+      },
+      {
+        "type": "paragraph",
+        "text": "One thing worth knowing: if you connect GitHub for login, and you have an existing Render account tied to the same email as your GitHub account, Render will just log you into that existing account instead of creating a new one. So it's not going to create duplicate accounts by accident."
+      },
+
+      { "type": "heading", "text": "Creating the Account" },
+      {
+        "type": "paragraph",
+        "text": "If you don't already have a GitHub account, you'll need one first. On github.com, click **Sign up**, enter an email, create a password, pick a username, and verify your email address. That part is separate from Render entirely."
+      },
+      {
+        "type": "paragraph",
+        "text": "Once GitHub is sorted, go to render.com and:"
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "items": [
+          "Click **Get Started** (or **Sign Up**).",
+          "Choose **GitHub** as the sign-up method.",
+          "GitHub will ask you to authorize Render to access your account. You can allow access to all repositories or only specific ones. I'd recommend picking specific repos if you're cautious about what you give a third-party platform access to, though most tutorials just select all.",
+          "You'll be redirected back to the Render dashboard, and your GitHub repos should now be visible when you create a new service."
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "That's really it. No credit card required to sign up or to deploy something on the free tier."
+      },
+
+      {
+        "type": "heading",
+        "text": "Deploying a Node.js Project as a Web Service"
+      },
+      {
+        "type": "paragraph",
+        "text": "Assuming your Node.js project is already pushed to a GitHub repo, here's the general flow:"
+      },
+      {
+        "type": "image",
+        "src": "blog/render-github-deploy/deploy-flow.svg",
+        "alt": "Flow diagram showing four steps: push to GitHub, Render build, start command, then a live URL",
+        "caption": "Push to your branch and Render takes it from there — build, start, live."
+      },
+      {
+        "type": "list",
+        "ordered": true,
+        "items": [
+          "From the Render dashboard, click **New** and select **Web Service**.",
+          "Pick the GitHub repository you want to deploy. If you don't see it listed, you may need to click \"Configure account\" and grant Render access to that specific repo.",
+          {
+            "text": "Render will try to detect your project automatically. For a typical Node.js app, it usually suggests:",
+            "sublist": [
+              "**Build Command**: `npm install` (or `npm ci` if you have a lock file and want a cleaner install)",
+              "**Start Command**: `node index.js` or `npm start`, depending on your `package.json`"
+            ]
+          },
+          "Choose an instance type. The **Free** tier works fine for testing.",
+          "Add any environment variables your app needs (database URL, API keys, `PORT`, etc.) under the Environment section.",
+          "Click **Create Web Service**."
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Render will pull your repo, run the build command, then start your app. You can watch the logs in real time while it deploys."
+      },
+      {
+        "type": "paragraph",
+        "text": "A couple of practical notes I'd flag here, since they trip people up:"
+      },
+      {
+        "type": "paragraph",
+        "text": "Your app needs to listen on the port Render provides through the `PORT` environment variable, not a hardcoded port like `3000`. Something like:"
+      },
+      {
+        "type": "code",
+        "language": "js",
+        "code": "const PORT = process.env.PORT || 3000;\napp.listen(PORT, () => console.log(`Server running on port ${PORT}`));"
+      },
+      {
+        "type": "paragraph",
+        "text": "If you hardcode the port instead of reading it from `process.env.PORT`, Render's health checks won't be able to reach your app, and the deploy will look like it failed even though your code is fine."
+      },
+      {
+        "type": "paragraph",
+        "text": "Every time you push to the connected branch (usually `main`), Render automatically triggers a new build and deploy. You don't need to log in and redeploy manually."
+      },
+
+      {
+        "type": "heading",
+        "text": "Why You'd Want to Deploy a Node.js App on Render"
+      },
+      {
+        "type": "paragraph",
+        "text": "**It's genuinely fast to get something live.** For a side project or a demo you want to share quickly, you can go from \"code on GitHub\" to \"live URL\" in a few minutes, without touching server configuration."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Automatic deploys from Git.** Once it's connected, pushing to your branch is basically your deploy pipeline. You don't need to set up your own CI/CD just for a simple deploy."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Free tier exists without a credit card.** That matters for students, portfolio projects, and anything you're not sure will need to run long-term."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Managed databases are available too.** If your Node app needs PostgreSQL or Redis, Render can host those alongside your service, so you're not juggling multiple providers for a small project."
+      },
+
+      {
+        "type": "heading",
+        "text": "Why You Might Not Want To (The Trade-offs)"
+      },
+      {
+        "type": "paragraph",
+        "text": "This is the part a lot of beginner guides skip, and it's where I'd push back a little on always recommending Render without context."
+      },
+      {
+        "type": "image",
+        "src": "blog/render-github-deploy/tradeoffs.svg",
+        "alt": "Diagram of the free-tier spin-down cycle: active, then asleep after idle time, then a cold start, then active again",
+        "caption": "The free-tier reality: idle for ~15 minutes, then a 30–60 second cold start on the next request."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Free web services spin down after inactivity.** As of what I found researching this, Render's free instances go to sleep after about 15 minutes without incoming traffic, and the next request after that can take something like 30 to 60 seconds while it spins back up. For a personal API or demo, that's usually fine. For anything where someone is waiting on a response in real time — like a production API, a webhook receiver, or anything time-sensitive — that cold start is a real problem."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Free tier is not meant for production traffic.** The free plan gives you limited RAM and CPU (from what I saw, around 512 MB RAM and a fraction of a CPU core). That's enough for testing and small side projects, not for something with real, sustained traffic."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Costs can add up as you scale.** Moving to an always-on instance starts at a small monthly fee, but once you add a production-grade database, more RAM, or higher bandwidth, the total cost climbs. A few comparisons I came across mentioned that at high traffic volumes, Render can end up more expensive than some usage-based alternatives like Railway or Fly.io, mainly because Render's pricing model isn't purely usage-based like theirs."
+      },
+      {
+        "type": "paragraph",
+        "text": "**Free databases expire.** Free PostgreSQL instances on Render have a fixed storage limit and get deleted automatically after a set number of days unless you upgrade. This is easy to forget if you're using the free database for something you actually care about keeping."
+      },
+
+      { "type": "heading", "text": "What I'd Take Away From This" },
+      {
+        "type": "paragraph",
+        "text": "For learning, prototyping, or showing a recruiter a working project, Render is a solid, low-friction option. Signing up with GitHub just removes a redundant step, since you'll need to connect GitHub for deployment anyway."
+      },
+      {
+        "type": "paragraph",
+        "text": "Where I'd be more careful is assuming the free tier behaves like a \"real\" hosting setup. The spin-down behavior and the database expiry aren't hidden, but they're easy to miss until your app goes to sleep in the middle of a demo. If a project moves past the \"just testing it\" stage, it's worth deciding early whether you actually need an always-on instance, rather than finding out the hard way when someone hits your sleeping API and waits a full minute for a response."
+      }
+    ]
+  }
+]

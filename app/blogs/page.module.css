@@ -1,0 +1,49 @@
+@import '../../styles/vars.css';
+
+.header {
+  margin-top: var(--space-section);
+  margin-left: var(--space-gutter);
+  margin-right: var(--space-gutter);
+  color: var(--color-text);
+}
+
+.eyebrow {
+  color: var(--color-accent);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.title {
+  font-size: var(--fs-2xl);
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  margin-top: 14px;
+  font-size: var(--fs-base);
+  color: var(--color-text-muted);
+  max-width: 60ch;
+}
+
+.container {
+  margin-top: 40px;
+  margin-bottom: var(--space-section);
+  margin-left: var(--space-gutter);
+  margin-right: var(--space-gutter);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  width: 100%;
+}
+
+.empty {
+  color: var(--color-text-muted);
+  font-size: var(--fs-base);
+}

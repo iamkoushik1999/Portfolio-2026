@@ -1,0 +1,43 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="coverTitle">
+  <title id="coverTitle">Terminal showing a git push, build, and successful deploy to Render</title>
+  <defs>
+    <clipPath id="winClip">
+      <rect x="140" y="115" width="920" height="400" rx="14" />
+    </clipPath>
+  </defs>
+
+  <rect width="1200" height="630" fill="#0b1220" />
+
+  <text x="140" y="76" font-family="Consolas, 'Courier New', monospace" font-size="15" font-weight="700" letter-spacing="3" fill="#5ee7ff">DEPLOY GUIDE</text>
+
+  <g clip-path="url(#winClip)">
+    <rect x="140" y="115" width="920" height="400" fill="#0d1424" />
+    <rect x="140" y="115" width="920" height="46" fill="#141b2e" />
+  </g>
+  <rect x="140" y="115" width="920" height="400" rx="14" fill="none" stroke="#232c42" stroke-width="1.5" />
+  <line x1="140" y1="161" x2="1060" y2="161" stroke="#232c42" stroke-width="1" />
+
+  <circle cx="168" cy="138" r="6.5" fill="#ff5f56" />
+  <circle cx="190" cy="138" r="6.5" fill="#ffbd2e" />
+  <circle cx="212" cy="138" r="6.5" fill="#27c93f" />
+
+  <rect x="470" y="123" width="260" height="26" rx="13" fill="#1b2540" stroke="#2c3654" />
+  <text x="600" y="140" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="13" fill="#8b96b8">yourapp.onrender.com</text>
+
+  <g font-family="Consolas, 'Courier New', monospace" font-size="19">
+    <text x="176" y="205"><tspan fill="#5ee7ff">$ </tspan><tspan fill="#e5e9f5">git push origin main</tspan></text>
+    <text x="176" y="239" fill="#6b7690">Enumerating objects: 12, done.</text>
+    <text x="176" y="273" fill="#6b7690">==&gt; Cloning from GitHub...</text>
+    <text x="176" y="307" fill="#6b7690">==&gt; Running build command 'npm install'</text>
+    <text x="176" y="341" fill="#27c93f">==&gt; Build successful</text>
+    <text x="176" y="375" fill="#e5e9f5">==&gt; Deploying...</text>
+    <text x="176" y="409" fill="#27c93f">==&gt; Your service is live</text>
+    <text x="176" y="443"><tspan fill="#5ee7ff">$ </tspan><tspan fill="#e5e9f5">curl https://yourapp.onrender.com</tspan></text>
+    <rect x="656" y="430" width="11" height="20" fill="#5ee7ff" />
+  </g>
+
+  <g transform="translate(1082,600)">
+    <circle r="4" fill="#5ee7ff" />
+  </g>
+  <text x="1122" y="605" text-anchor="end" font-family="Consolas, 'Courier New', monospace" font-size="14" fill="#565f7a">koushik.dev</text>
+</svg>

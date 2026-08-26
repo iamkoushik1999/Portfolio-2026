@@ -1,0 +1,31 @@
+<svg width="1000" height="320" viewBox="0 0 1000 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="tradeoffsTitle">
+  <title id="tradeoffsTitle">Terminal transcript showing a free-tier request before and after the service spins down</title>
+  <defs>
+    <clipPath id="toClip">
+      <rect x="1" y="1" width="998" height="318" rx="14" />
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#toClip)">
+    <rect x="1" y="1" width="998" height="318" fill="#0d1424" />
+    <rect x="1" y="1" width="998" height="44" fill="#141b2e" />
+  </g>
+  <rect x="1" y="1" width="998" height="318" rx="14" fill="none" stroke="#232c42" stroke-width="1.5" />
+  <line x1="1" y1="45" x2="999" y2="45" stroke="#232c42" stroke-width="1" />
+
+  <circle cx="27" cy="23" r="6" fill="#ff5f56" />
+  <circle cx="47" cy="23" r="6" fill="#ffbd2e" />
+  <circle cx="67" cy="23" r="6" fill="#27c93f" />
+  <text x="500" y="28" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="13" fill="#8b96b8">free-tier &#8212; two requests, 15 minutes apart</text>
+
+  <g font-family="Consolas, 'Courier New', monospace" font-size="18">
+    <text x="36" y="90"><tspan fill="#5ee7ff">$ </tspan><tspan fill="#e5e9f5">curl -w "%{time_total}s\n" yourapp.onrender.com</tspan></text>
+    <text x="36" y="124" fill="#27c93f">200 OK &#8212; 0.11s</text>
+
+    <text x="36" y="170" fill="#565f7a">... no traffic for ~15 minutes, service spins down ...</text>
+
+    <text x="36" y="216"><tspan fill="#5ee7ff">$ </tspan><tspan fill="#e5e9f5">curl -w "%{time_total}s\n" yourapp.onrender.com</tspan></text>
+    <text x="36" y="250" fill="#ffbd2e">waking up instance...</text>
+    <text x="36" y="284"><tspan fill="#27c93f">200 OK</tspan><tspan fill="#e5e9f5"> &#8212; 47.82s</tspan><tspan fill="#565f7a"> (cold start)</tspan></text>
+  </g>
+</svg>

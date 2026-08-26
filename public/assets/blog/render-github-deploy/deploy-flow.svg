@@ -1,0 +1,30 @@
+<svg width="1000" height="320" viewBox="0 0 1000 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="flowTitle">
+  <title id="flowTitle">Terminal log of Render building and starting a Node.js web service</title>
+  <defs>
+    <clipPath id="flowClip">
+      <rect x="1" y="1" width="998" height="318" rx="14" />
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#flowClip)">
+    <rect x="1" y="1" width="998" height="318" fill="#0d1424" />
+    <rect x="1" y="1" width="998" height="44" fill="#141b2e" />
+  </g>
+  <rect x="1" y="1" width="998" height="318" rx="14" fill="none" stroke="#232c42" stroke-width="1.5" />
+  <line x1="1" y1="45" x2="999" y2="45" stroke="#232c42" stroke-width="1" />
+
+  <circle cx="27" cy="23" r="6" fill="#ff5f56" />
+  <circle cx="47" cy="23" r="6" fill="#ffbd2e" />
+  <circle cx="67" cy="23" r="6" fill="#27c93f" />
+  <text x="500" y="28" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="13" fill="#8b96b8">web-service &#8212; render build log</text>
+
+  <g font-family="Consolas, 'Courier New', monospace" font-size="18">
+    <text x="36" y="90"><tspan fill="#5ee7ff">$ </tspan><tspan fill="#e5e9f5">git push origin main</tspan></text>
+    <text x="36" y="124" fill="#6b7690">==&gt; Detected Node.js project</text>
+    <text x="36" y="158" fill="#6b7690">==&gt; Build command: npm install</text>
+    <text x="36" y="192" fill="#27c93f">==&gt; Build successful</text>
+    <text x="36" y="226" fill="#6b7690">==&gt; Start command: npm start</text>
+    <text x="36" y="260" fill="#e5e9f5">Server running on port 10000</text>
+    <text x="36" y="294"><tspan fill="#27c93f">==&gt; Your service is live at </tspan><tspan fill="#5ee7ff">https://yourapp.onrender.com</tspan></text>
+  </g>
+</svg>
