@@ -6,7 +6,6 @@ import { Experience } from "../components/Experience/Experience";
 import { Certifications } from "../components/Certifications/Certifications";
 import { Projects } from "../components/Projects/Projects";
 import { Contact } from "../components/Contact/Contact";
-import { BackToTop } from "../components/BackToTop/BackToTop";
 import { SITE_URL, SITE_NAME, SITE_DESCRIPTION } from "../lib/site";
 import skills from "../data/skills.json";
 import contacts from "../data/contacts.json";
@@ -43,7 +42,6 @@ export default function Home() {
         <Projects />
         <Contact />
       </div>
-      <BackToTop />
     </>
   );
 }
