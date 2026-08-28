@@ -1,0 +1,47 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="coverTitle">
+  <title id="coverTitle">GitHub authorization dialog granting Render access to a repository</title>
+  <defs>
+    <clipPath id="winClip">
+      <rect x="140" y="115" width="920" height="400" rx="14" />
+    </clipPath>
+  </defs>
+
+  <rect width="1200" height="630" fill="#0b1220" />
+
+  <text x="140" y="76" font-family="Consolas, 'Courier New', monospace" font-size="15" font-weight="700" letter-spacing="3" fill="#5ee7ff">SIGN UP GUIDE</text>
+
+  <g clip-path="url(#winClip)">
+    <rect x="140" y="115" width="920" height="400" fill="#0d1424" />
+    <rect x="140" y="115" width="920" height="46" fill="#141b2e" />
+  </g>
+  <rect x="140" y="115" width="920" height="400" rx="14" fill="none" stroke="#232c42" stroke-width="1.5" />
+  <line x1="140" y1="161" x2="1060" y2="161" stroke="#232c42" stroke-width="1" />
+
+  <circle cx="168" cy="138" r="6.5" fill="#ff5f56" />
+  <circle cx="190" cy="138" r="6.5" fill="#ffbd2e" />
+  <circle cx="212" cy="138" r="6.5" fill="#27c93f" />
+
+  <rect x="440" y="123" width="320" height="26" rx="13" fill="#1b2540" stroke="#2c3654" />
+  <text x="600" y="140" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="13" fill="#8b96b8">github.com/login/oauth/authorize</text>
+
+  <g transform="translate(600,225)">
+    <circle r="30" fill="#161d33" stroke="#2c3654" stroke-width="1.5" />
+    <path fill="#e5e9f5" d="M0-18a18 18 0 00-5.7 35.1c.9.2 1.2-.4 1.2-.9v-3.4c-5 1.1-6-2.1-6-2.1-.8-2-2-2.5-2-2.5-1.6-1.1.1-1.1.1-1.1 1.8.1 2.7 1.8 2.7 1.8 1.6 2.8 4.2 2 5.2 1.5.2-1.2.6-2 1.1-2.4-4-.5-8.2-2-8.2-8.9 0-2 .7-3.6 1.8-4.8-.2-.5-.8-2.3.2-4.7 0 0 1.5-.5 4.8 1.8a16.5 16.5 0 018.8 0c3.3-2.3 4.8-1.8 4.8-1.8 1 2.4.4 4.2.2 4.7 1.1 1.2 1.8 2.8 1.8 4.8 0 6.9-4.2 8.4-8.2 8.9.6.5 1.2 1.6 1.2 3.3v4.9c0 .5.3 1.1 1.2.9A18 18 0 000-18z" />
+  </g>
+  <text x="600" y="284" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="18" font-weight="700" fill="#e5e9f5">Authorize Render</text>
+  <text x="600" y="310" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="13" fill="#8b96b8">Render by render-oss would like permission to access your account</text>
+
+  <g font-family="Consolas, 'Courier New', monospace" font-size="14" fill="#8b96b8">
+    <text x="330" y="356"><tspan fill="#27c93f">&#10003; </tspan>Read access to code, commit statuses</text>
+    <text x="330" y="382"><tspan fill="#27c93f">&#10003; </tspan>Read and write access to deployments</text>
+    <text x="330" y="408"><tspan fill="#27c93f">&#10003; </tspan>Read-only access to your email address</text>
+  </g>
+
+  <rect x="440" y="440" width="320" height="46" rx="9" fill="#1f6feb" />
+  <text x="600" y="468" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="15" font-weight="700" fill="#f4f7ff">Authorize render-oss</text>
+
+  <g transform="translate(1082,600)">
+    <circle r="4" fill="#5ee7ff" />
+  </g>
+  <text x="1122" y="605" text-anchor="end" font-family="Consolas, 'Courier New', monospace" font-size="14" fill="#565f7a">koushik.dev</text>
+</svg>

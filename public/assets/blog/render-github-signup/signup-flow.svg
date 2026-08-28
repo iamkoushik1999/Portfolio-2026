@@ -1,0 +1,70 @@
+<svg width="1000" height="320" viewBox="0 0 1000 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="signupFlowTitle">
+  <title id="signupFlowTitle">Flow diagram showing four steps: click sign up with GitHub, authorize access, redirect to dashboard, repos visible</title>
+  <defs>
+    <clipPath id="sfClip">
+      <rect x="1" y="1" width="998" height="318" rx="14" />
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#sfClip)">
+    <rect x="1" y="1" width="998" height="318" fill="#0d1424" />
+    <rect x="1" y="1" width="998" height="44" fill="#141b2e" />
+  </g>
+  <rect x="1" y="1" width="998" height="318" rx="14" fill="none" stroke="#232c42" stroke-width="1.5" />
+  <line x1="1" y1="45" x2="999" y2="45" stroke="#232c42" stroke-width="1" />
+
+  <circle cx="27" cy="23" r="6" fill="#ff5f56" />
+  <circle cx="47" cy="23" r="6" fill="#ffbd2e" />
+  <circle cx="67" cy="23" r="6" fill="#27c93f" />
+  <text x="500" y="28" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="13" fill="#8b96b8">render.com &#8212; sign up with GitHub</text>
+
+  <g font-family="Consolas, 'Courier New', monospace" font-size="14">
+    <!-- step 1 -->
+    <g transform="translate(48,110)">
+      <rect width="190" height="120" rx="10" fill="#161d33" stroke="#2c3654" stroke-width="1.5" />
+      <text x="95" y="34" text-anchor="middle" fill="#5ee7ff" font-size="12" letter-spacing="1">STEP 1</text>
+      <text x="95" y="68" text-anchor="middle" fill="#e5e9f5">Click</text>
+      <text x="95" y="88" text-anchor="middle" fill="#e5e9f5">"Sign Up"</text>
+      <text x="95" y="108" text-anchor="middle" fill="#8b96b8">choose GitHub</text>
+    </g>
+
+    <path d="M244 170 L292 170" stroke="#3a4568" stroke-width="2" marker-end="url(#arrow)" />
+
+    <!-- step 2 -->
+    <g transform="translate(296,110)">
+      <rect width="190" height="120" rx="10" fill="#161d33" stroke="#2c3654" stroke-width="1.5" />
+      <text x="95" y="34" text-anchor="middle" fill="#5ee7ff" font-size="12" letter-spacing="1">STEP 2</text>
+      <text x="95" y="68" text-anchor="middle" fill="#e5e9f5">Authorize</text>
+      <text x="95" y="88" text-anchor="middle" fill="#e5e9f5">Render on</text>
+      <text x="95" y="108" text-anchor="middle" fill="#8b96b8">GitHub</text>
+    </g>
+
+    <path d="M492 170 L540 170" stroke="#3a4568" stroke-width="2" marker-end="url(#arrow)" />
+
+    <!-- step 3 -->
+    <g transform="translate(544,110)">
+      <rect width="190" height="120" rx="10" fill="#161d33" stroke="#2c3654" stroke-width="1.5" />
+      <text x="95" y="34" text-anchor="middle" fill="#5ee7ff" font-size="12" letter-spacing="1">STEP 3</text>
+      <text x="95" y="68" text-anchor="middle" fill="#e5e9f5">Redirected</text>
+      <text x="95" y="88" text-anchor="middle" fill="#e5e9f5">to Render</text>
+      <text x="95" y="108" text-anchor="middle" fill="#8b96b8">dashboard</text>
+    </g>
+
+    <path d="M740 170 L788 170" stroke="#3a4568" stroke-width="2" marker-end="url(#arrow)" />
+
+    <!-- step 4 -->
+    <g transform="translate(792,110)">
+      <rect width="190" height="120" rx="10" fill="#161d33" stroke="#27c93f" stroke-width="1.5" />
+      <text x="95" y="34" text-anchor="middle" fill="#27c93f" font-size="12" letter-spacing="1">STEP 4</text>
+      <text x="95" y="68" text-anchor="middle" fill="#e5e9f5">Repos are</text>
+      <text x="95" y="88" text-anchor="middle" fill="#e5e9f5">ready to</text>
+      <text x="95" y="108" text-anchor="middle" fill="#8b96b8">deploy</text>
+    </g>
+  </g>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#3a4568" />
+    </marker>
+  </defs>
+</svg>

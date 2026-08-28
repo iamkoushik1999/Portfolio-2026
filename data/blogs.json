@@ -1,12 +1,12 @@
 [
   {
-    "slug": "render-github-deploy",
-    "title": "Signing Up on Render with GitHub and Deploying a Node.js App",
-    "excerpt": "Why connecting GitHub during Render's sign-up flow saves you a step, how to actually deploy a Node.js API as a web service, and the free-tier trade-offs that catch people off guard later.",
+    "slug": "render-github-signup",
+    "title": "Signing Up on Render with GitHub: What It Actually Does",
+    "excerpt": "Why connecting GitHub during Render's sign-up flow saves you a step, what the authorization is actually granting, and how to get an account set up without extra friction.",
     "date": "2026-08-26",
-    "readTime": "9 min read",
-    "tags": ["Render", "Node.js", "Deployment", "GitHub"],
-    "coverImage": "blog/render-github-deploy/cover.svg",
+    "readTime": "5 min read",
+    "tags": ["Render", "GitHub", "Deployment", "Sign Up"],
+    "coverImage": "blog/render-github-signup/cover.svg",
     "content": [
       {
         "type": "paragraph",
@@ -19,8 +19,8 @@
         "items": [
           "What Render actually is",
           "Why signing up with GitHub makes sense",
-          "How to deploy a Node.js project as a web service",
-          "The real pros and cons, so you don't get surprised later"
+          "What that authorization is actually granting",
+          "How to create the account, step by step"
         ]
       },
 
@@ -37,7 +37,7 @@
         "type": "list",
         "ordered": false,
         "items": [
-          "Web services (this is what we'll use for a Node.js API)",
+          "Web services (this is what you'd use for a Node.js API)",
           "Static sites (for frontend builds like a React app)",
           "Background workers",
           "Cron jobs",
@@ -46,7 +46,7 @@
       },
       {
         "type": "paragraph",
-        "text": "For a Node.js backend, \"web service\" is the one you want."
+        "text": "For a Node.js backend, \"web service\" is the one you want — more on actually deploying one in a follow-up post."
       },
 
       { "type": "heading", "text": "Why Sign Up with GitHub Instead of Email" },
@@ -79,6 +79,14 @@
         "type": "paragraph",
         "text": "One thing worth knowing: if you connect GitHub for login, and you have an existing Render account tied to the same email as your GitHub account, Render will just log you into that existing account instead of creating a new one. So it's not going to create duplicate accounts by accident."
       },
+      {
+        "type": "image",
+        "src": "blog/render-github-signup/signup-flow.svg",
+        "alt": "Flow diagram showing four steps: click sign up with GitHub, authorize on GitHub, get redirected to the dashboard, repos are ready to deploy",
+        "caption": "One authorization on GitHub is all it takes to link your repos to Render.",
+        "width": 1000,
+        "height": 320
+      },
 
       { "type": "heading", "text": "Creating the Account" },
       {
@@ -101,7 +109,22 @@
       },
       {
         "type": "paragraph",
-        "text": "That's really it. No credit card required to sign up or to deploy something on the free tier."
+        "text": "That's really it. No credit card required to sign up or to deploy something on the free tier. With the account connected, the next step is actually deploying something — I cover deploying a Node.js app as a web service, plus the free-tier trade-offs, in a separate post."
+      }
+    ]
+  },
+  {
+    "slug": "render-nodejs-deploy",
+    "title": "Deploying a Node.js App on Render (and the Free-Tier Trade-offs)",
+    "excerpt": "How to actually deploy a Node.js API as a Render web service, the PORT gotcha that makes healthy deploys look broken, and the free-tier trade-offs that catch people off guard later.",
+    "date": "2026-08-27",
+    "readTime": "7 min read",
+    "tags": ["Render", "Node.js", "Deployment", "Hosting"],
+    "coverImage": "blog/render-nodejs-deploy/cover.svg",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Once your Render account is connected to GitHub, the actual deploy is the easy part. This post walks through deploying a Node.js API as a web service, then goes into the trade-offs of Render's free tier — the part a lot of beginner guides skip."
       },
 
       {
@@ -114,7 +137,7 @@
       },
       {
         "type": "image",
-        "src": "blog/render-github-deploy/deploy-flow.svg",
+        "src": "blog/render-nodejs-deploy/deploy-flow.svg",
         "alt": "Flow diagram showing four steps: push to GitHub, Render build, start command, then a live URL",
         "caption": "Push to your branch and Render takes it from there — build, start, live.",
         "width": 1000,
@@ -195,7 +218,7 @@
       },
       {
         "type": "image",
-        "src": "blog/render-github-deploy/tradeoffs.svg",
+        "src": "blog/render-nodejs-deploy/tradeoffs.svg",
         "alt": "Diagram of the free-tier spin-down cycle: active, then asleep after idle time, then a cold start, then active again",
         "caption": "The free-tier reality: idle for ~15 minutes, then a 30–60 second cold start on the next request.",
         "width": 1000,
@@ -221,7 +244,7 @@
       { "type": "heading", "text": "What I'd Take Away From This" },
       {
         "type": "paragraph",
-        "text": "For learning, prototyping, or showing a recruiter a working project, Render is a solid, low-friction option. Signing up with GitHub just removes a redundant step, since you'll need to connect GitHub for deployment anyway."
+        "text": "For learning, prototyping, or showing a recruiter a working project, Render is a solid, low-friction option to deploy to once your GitHub account is connected."
       },
       {
         "type": "paragraph",
