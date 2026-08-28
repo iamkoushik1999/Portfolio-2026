@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 import styles from './Navbar.module.css';
 import { ThemeToggle } from '../ThemeToggle/ThemeToggle';
@@ -34,6 +35,7 @@ const NAV_LINKS = [
 ];
 
 export const Navbar = () => {
+  const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -52,6 +54,8 @@ export const Navbar = () => {
   }, [menuOpen]);
 
   const handleLogoClick = (event) => {
+    if (pathname !== '/') return;
+
     const isPlainLeftClick =
       event.button === 0 &&
       !event.metaKey &&
