@@ -16,7 +16,7 @@ export const Projects = () => {
           })}
         </div>
         <p className={styles.hostingNote}>
-          ⏳ Demos are hosted on Render&apos;s free tier — the backend may take
+          Demos are hosted on Render&apos;s free tier — the backend may take
           60-90s to spin up on first load.
         </p>
       </div>
