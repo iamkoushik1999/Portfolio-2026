@@ -1,4 +1,4 @@
-@import "../../styles/vars.css";
+@import '../../styles/vars.css';
 
 .container {
   margin-top: var(--space-section);
@@ -28,4 +28,12 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 28px;
   width: 100%;
+}
+
+.hostingNote {
+  margin-top: 24px;
+  text-align: center;
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+  line-height: 1.5;
 }
