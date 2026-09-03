@@ -1,0 +1,42 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="coverTitle">
+  <title id="coverTitle">Terminal showing UptimeRobot pinging a Render service every five minutes to keep it awake</title>
+  <defs>
+    <clipPath id="urWinClip">
+      <rect x="140" y="115" width="920" height="400" rx="14" />
+    </clipPath>
+  </defs>
+
+  <rect width="1200" height="630" fill="#0b1220" />
+
+  <text x="140" y="76" font-family="Consolas, 'Courier New', monospace" font-size="15" font-weight="700" letter-spacing="3" fill="#5ee7ff">UPTIME GUIDE</text>
+
+  <g clip-path="url(#urWinClip)">
+    <rect x="140" y="115" width="920" height="400" fill="#0d1424" />
+    <rect x="140" y="115" width="920" height="46" fill="#141b2e" />
+  </g>
+  <rect x="140" y="115" width="920" height="400" rx="14" fill="none" stroke="#232c42" stroke-width="1.5" />
+  <line x1="140" y1="161" x2="1060" y2="161" stroke="#232c42" stroke-width="1" />
+
+  <circle cx="168" cy="138" r="6.5" fill="#ff5f56" />
+  <circle cx="190" cy="138" r="6.5" fill="#ffbd2e" />
+  <circle cx="212" cy="138" r="6.5" fill="#27c93f" />
+
+  <rect x="440" y="123" width="320" height="26" rx="13" fill="#1b2540" stroke="#2c3654" />
+  <text x="600" y="140" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="13" fill="#8b96b8">uptimerobot.com/dashboard</text>
+
+  <g font-family="Consolas, 'Courier New', monospace" font-size="18">
+    <text x="176" y="203" fill="#8b96b8">Monitor: yourapp.onrender.com/health</text>
+    <text x="176" y="235" fill="#8b96b8">Interval: every 5 minutes</text>
+    <text x="176" y="277"><tspan fill="#5ee7ff">09:00:00 </tspan><tspan fill="#27c93f">200 OK</tspan><tspan fill="#e5e9f5"> &#8212; 118ms</tspan></text>
+    <text x="176" y="311"><tspan fill="#5ee7ff">09:05:00 </tspan><tspan fill="#27c93f">200 OK</tspan><tspan fill="#e5e9f5"> &#8212; 104ms</tspan></text>
+    <text x="176" y="345"><tspan fill="#5ee7ff">09:10:00 </tspan><tspan fill="#27c93f">200 OK</tspan><tspan fill="#e5e9f5"> &#8212; 121ms</tspan></text>
+    <text x="176" y="379"><tspan fill="#5ee7ff">09:15:00 </tspan><tspan fill="#27c93f">200 OK</tspan><tspan fill="#e5e9f5"> &#8212; 97ms</tspan></text>
+    <text x="176" y="421" fill="#e5e9f5">Uptime (30 days): <tspan fill="#27c93f">99.98%</tspan></text>
+    <rect x="470" y="408" width="11" height="20" fill="#5ee7ff" />
+  </g>
+
+  <g transform="translate(1082,600)">
+    <circle r="4" fill="#5ee7ff" />
+  </g>
+  <text x="1122" y="605" text-anchor="end" font-family="Consolas, 'Courier New', monospace" font-size="14" fill="#565f7a">koushik.dev</text>
+</svg>

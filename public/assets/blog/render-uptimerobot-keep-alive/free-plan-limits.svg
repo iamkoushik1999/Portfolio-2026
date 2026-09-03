@@ -1,0 +1,29 @@
+<svg width="1000" height="320" viewBox="0 0 1000 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="limitsTitle">
+  <title id="limitsTitle">Terminal-style panel listing UptimeRobot's free plan limits: 50 monitors, 5-minute minimum interval, and basic alert channels</title>
+  <defs>
+    <clipPath id="fplClip">
+      <rect x="1" y="1" width="998" height="318" rx="14" />
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#fplClip)">
+    <rect x="1" y="1" width="998" height="318" fill="#0d1424" />
+    <rect x="1" y="1" width="998" height="44" fill="#141b2e" />
+  </g>
+  <rect x="1" y="1" width="998" height="318" rx="14" fill="none" stroke="#232c42" stroke-width="1.5" />
+  <line x1="1" y1="45" x2="999" y2="45" stroke="#232c42" stroke-width="1" />
+
+  <circle cx="27" cy="23" r="6" fill="#ff5f56" />
+  <circle cx="47" cy="23" r="6" fill="#ffbd2e" />
+  <circle cx="67" cy="23" r="6" fill="#27c93f" />
+  <text x="500" y="28" text-anchor="middle" font-family="Consolas, 'Courier New', monospace" font-size="13" fill="#8b96b8">uptimerobot.com &#8212; free plan</text>
+
+  <g font-family="Consolas, 'Courier New', monospace" font-size="17">
+    <text x="36" y="90"><tspan fill="#5ee7ff">monitors </tspan><tspan fill="#e5e9f5">up to 50</tspan></text>
+    <text x="36" y="128"><tspan fill="#5ee7ff">check interval </tspan><tspan fill="#e5e9f5">5 minutes (minimum)</tspan></text>
+    <text x="36" y="166"><tspan fill="#5ee7ff">monitor types </tspan><tspan fill="#e5e9f5">HTTP(s), keyword, ping, port</tspan></text>
+    <text x="36" y="204"><tspan fill="#5ee7ff">alerts </tspan><tspan fill="#e5e9f5">email, browser push, some webhooks</tspan></text>
+    <text x="36" y="242"><tspan fill="#5ee7ff">log history </tspan><tspan fill="#e5e9f5">limited retention window</tspan></text>
+    <text x="36" y="284" fill="#565f7a">1-minute intervals and longer logs need a paid plan</text>
+  </g>
+</svg>
